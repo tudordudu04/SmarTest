@@ -1,0 +1,6 @@
+SetupGuide.txt
+README.md
+/backend/app/__pycache__
+/frontend/package-lock.json
+/frontend/node*
+ChatBot Interactions Tudor

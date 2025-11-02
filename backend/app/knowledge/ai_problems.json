@@ -1,0 +1,106 @@
+{
+  "n_queens": {
+    "label_ro": "n-queens",
+    "instances": ["n=8", "n=10", "n=12"],
+    "strategies": [
+      {
+        "name": "CSP cu backtracking, MRV/degree, LCV, Forward Checking și AC-3",
+        "keywords": [
+          "CSP",
+          "problemă cu restricții",
+          "backtracking",
+          "MRV",
+          "Minimum Remaining Values",
+          "degree heuristic",
+          "LCV",
+          "Least Constraining Value",
+          "Forward Checking",
+          "AC-3",
+          "consistența arcului",
+          "propagare a constrângerilor",
+          "euristică",
+          "variabile",
+          "domenii"
+        ]
+      },
+      {
+        "name": "Căutare locală cu min-conflicts și restarturi",
+        "keywords": [
+          "căutare locală",
+          "min-conflicts",
+          "conflicte",
+          "hill climbing",
+          "random restart",
+          "restarturi aleatoare",
+          "funcție de cost"
+        ]
+      }
+    ],
+    "answer_template_ro": "Reformulăm problema ca CSP și aplicăm backtracking cu MRV/degree, LCV și propagare a restricțiilor (Forward Checking, AC-3). Pentru instanțe mari, o abordare pragmatică este min-conflicts (căutare locală) cu restarturi."
+  },
+  "graph_coloring": {
+    "label_ro": "colorarea unui graf",
+    "instances": ["|V|=30, |E|=100, k=3 culori", "|V|=50, |E|=200, k=4 culori"],
+    "strategies": [
+      {
+        "name": "CSP cu backtracking și propagare de restricții (AC-3/Forward Checking)",
+        "keywords": [
+          "CSP",
+          "backtracking",
+          "AC-3",
+          "Forward Checking",
+          "MRV",
+          "LCV",
+          "consistență",
+          "restricții binare",
+          "colorare graf",
+          "k-colors",
+          "euristică"
+        ]
+      }
+    ],
+    "answer_template_ro": "Modelăm colorarea unui graf ca CSP și folosim backtracking cu euristici MRV/LCV și propagare de restricții (Forward Checking, AC-3) pentru a reduce spațiul de căutare."
+  },
+  "knights_tour": {
+    "label_ro": "drumul calului (knight’s tour)",
+    "instances": ["tabla 8x8", "tabla 6x6", "tabla 10x10"],
+    "strategies": [
+      {
+        "name": "Backtracking ghidat de regula lui Warnsdorff (euristică)",
+        "keywords": [
+          "backtracking",
+          "Warnsdorff",
+          "euristică grad minim",
+          "ordine de vizitare",
+          "căutare în adâncime",
+          "DFS",
+          "pruning"
+        ]
+      }
+    ],
+    "answer_template_ro": "Aplicăm backtracking în spațiul stărilor, ordonând mutările după regula lui Warnsdorff (grad minim), ceea ce reduce masiv ramificarea. În practică, funcționează foarte bine pe plăci standard."
+  },
+  "generalized_hanoi": {
+    "label_ro": "Turnurile din Hanoi generalizat",
+    "instances": ["n=10 discuri, k=3 țăruși", "n=12 discuri, k=4 țăruși"],
+    "strategies": [
+      {
+        "name": "Planificare/căutare în spațiul stărilor; pentru k=3 soluția recursivă optimă; pentru k>3, schemă Frame–Stewart sau căutare informată",
+        "keywords": [
+          "căutare în spațiul stărilor",
+          "planificare",
+          "recursiv",
+          "soluție optimă",
+          "k=3",
+          "k>3",
+          "Frame–Stewart",
+          "euristică admisibilă",
+          "cost uniform",
+          "IDA*",
+          "restricții"
+        ]
+      }
+    ],
+    "answer_template_ro": "Pentru k=3 există o soluție recursivă optimă. În general (k>3), se pot folosi schema Frame–Stewart sau strategii de căutare informată (ex. cost uniform/IDA*) cu euristică admisibilă. Se lucrează în spațiul stărilor ca problemă de planificare."
+  }
+}
